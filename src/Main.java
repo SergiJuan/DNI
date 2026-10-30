@@ -6,7 +6,7 @@ public class Main {
         System.out.println(dni.getNumber());
         System.out.println(dni.getLetter());
         System.out.println(Dni.nifForDni(dni.getNumber()));
-        System.out.println(dni.isCorrectDni());
+        System.out.println(dni.isCorrect());
         System.out.println(dni.toFormattedString());
 
         System.out.println();
@@ -16,7 +16,7 @@ public class Main {
         System.out.println(dni2.getNumber());
         System.out.println(dni2.getLetter());
         System.out.println(Dni.nifForDni(dni2.getNumber()));
-        System.out.println(dni2.isCorrectDni());
+        System.out.println(dni2.isCorrect());
         System.out.println(dni2.toFormattedString());
     }
 }

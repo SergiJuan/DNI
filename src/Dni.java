@@ -10,6 +10,12 @@ public class Dni {
     public Dni(int number, char letter) {
         this.number = number;
         this.letter = letter;
+        char realLetter = letterForDni(number);
+        if (realLetter == letter) {
+            this.number = number;
+        } else {
+            this.number = -number;
+        }
     }
 
     public Dni(int number) {
@@ -21,6 +27,13 @@ public class Dni {
         String numStr = s.substring(0, s.length() - 1);
         this.number = Integer.parseInt(numStr);
         this.letter = s.charAt(s.length() - 1);
+
+        char realLetter = letterForDni(number);
+        if (realLetter == letter) {
+            this.number = number;
+        } else {
+            this.number = -number;
+        }
     }
 
     public int getNumber() {
