@@ -43,12 +43,8 @@ public class Dni {
         return ""+ number + letterForDni(number);
     }
 
-    public boolean correctDni() {
-        if (number<0) {
-            return false;
-        } else {
-            return true;
-        }
+    public boolean isCorrect() {
+        return number >=0;
     }
 
     @Override
