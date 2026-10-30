@@ -1,7 +1,7 @@
 public class Dni {
     private int number;
     private char letter;
-    private static char[] index_letters = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B','N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+    private final static char[] LETTERS = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B','N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
 
     public Dni() {
         this.number = 0;
@@ -36,7 +36,7 @@ public class Dni {
     }
 
     public static char letterForDni(int number) {
-        return index_letters[number % 23];
+        return LETTERS[number % 23];
     }
 
     public static String nifForDni(int number) {
