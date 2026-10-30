@@ -29,9 +29,7 @@ public class Dni {
         this.letter = s.charAt(s.length() - 1);
 
         char realLetter = letterForDni(number);
-        if (realLetter == letter) {
-            this.number = number;
-        } else {
+        if (realLetter != letter) {
             this.number = -number;
         }
     }
@@ -46,6 +44,10 @@ public class Dni {
 
     public void setNumber(int number) {
         this.number = number;
+        char realLetter = letterForDni(number);
+        if (realLetter != letter) {
+            this.number = -number;
+        }
     }
 
     public static char letterForDni(int number) {
